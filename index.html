@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test – GitHub Pages</title>
-</head>
-<body>
-  <h1>🎉 Es funktioniert!</h1>
-  <p>Meine GitHub Pages Seite läuft.</p>
-</body>
-</html>
+<textarea id="note"></textarea>
+<button onclick="save()">Speichern</button>
+
+<script>
+function save() {
+  localStorage.setItem("note", document.getElementById("note").value);
+}
+document.getElementById("note").value =
+  localStorage.getItem("note") || "";
+</script>
